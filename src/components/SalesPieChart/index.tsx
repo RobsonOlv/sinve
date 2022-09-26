@@ -14,7 +14,7 @@ interface SalesPieChartProps {
 }
 
 export const SalesPieChart: React.FC<SalesPieChartProps> = ({ data }) => {
-  const color = ['#1890FF', '#13C2C2', '#52C41A', '#FADB14', '#EB2F96', '#722ED1'];
+  const color = ['#1890FF', '#13C2C2', '#52C41A', '#FADB14', '#EB2F96', '#975fe4'];
 
   const width = 250;
   const radius = width / 2;
@@ -32,8 +32,9 @@ export const SalesPieChart: React.FC<SalesPieChartProps> = ({ data }) => {
     const svg = d3
       .select('#sales-pie-chart')
       .append('svg')
-      .attr('height', width)
       .attr('width', width)
+      .attr('width', '100%')
+      .attr('viewBox', [0, 0, width, width])
       .append('g')
       .attr('transform', `translate(${radius}, ${radius})`);
 
