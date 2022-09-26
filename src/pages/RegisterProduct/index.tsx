@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import {
   ButtonSinve, InputSinve, Navbar, ProductHistory, ShowProductHistory,
 } from '../../components';
 import {
-  RegisterContainer, Title, ProductContainer, TopProductContainer, Container, ButtonContainer,
+  RegisterContainer, Title, ProductContainer, TopProductContainer, Container, ButtonsContainer,
 } from './style';
 
 export const RegisterProduct: React.FC = () => {
+  const history = useHistory();
   const [showHistory, setShowHistory] = useState<boolean>(false);
 
   const didUserTapArrowButton = () => {
@@ -47,9 +49,11 @@ export const RegisterProduct: React.FC = () => {
         showHistory ? <ShowProductHistory width="69%" onClick={didUserTapArrowButton} />
           : <ProductHistory width="69%" onClick={didUserTapArrowButton} />
       }
-      <ButtonContainer>
-        <ButtonSinve title="Cadastrar produto" />
-      </ButtonContainer>
+
+      <ButtonsContainer>
+        <ButtonSinve title="Cadastrar produto" margin="0px 20px" />
+        <ButtonSinve title="Voltar" margin="0px 20px" onClick={() => history.push('/')} />
+      </ButtonsContainer>
     </Container>
 
   );
