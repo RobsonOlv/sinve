@@ -42,6 +42,8 @@ export const TopProductContainer = styled.div`
   width: 100%;
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: center;
   margin-top: 40px !important;
 `;
