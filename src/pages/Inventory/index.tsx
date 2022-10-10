@@ -50,10 +50,10 @@ export const Inventory: React.FC = () => {
           <InputSearch width="573px" title="oq" />
           <ButtonSinve title="Cadastrar produto" margin="0px 0px 0px 0px" onClick={didUserTapAddProduct} />
         </TopContainer>
-        <MiddleContainer>
+        {/* <MiddleContainer>
           <Text>Selecione o Filtro:</Text>
           <ButtonCustom style={{ marginLeft: '10px !important' }}>Na média</ButtonCustom>
-        </MiddleContainer>
+        </MiddleContainer> */}
         <BottomContainer>
           <Text>Ordenar por:</Text>
           <ButtonCustom style={{ marginLeft: '10px !important' }}>Estoque escasso</ButtonCustom>
