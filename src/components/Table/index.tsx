@@ -65,31 +65,35 @@ const columns: ColumnsType<DataType> = [
   },
 ];
 
-const data: DataType[] = [
-  {
-    key: '1',
-    item: 1,
-    product: 'Sapato',
-    inventory: 1000,
-    idealInventory: 1200,
-  },
-  {
-    key: '2',
-    item: 2,
-    product: 'Máquina de lavar',
-    inventory: 1450,
-    idealInventory: 1500,
-  },
-  {
-    key: '3',
-    item: 3,
-    product: 'Suporte para notebook',
-    inventory: 2100,
-    idealInventory: 2100,
-  },
-];
+// const data: DataType[] = [
+//   {
+//     key: '1',
+//     item: 1,
+//     product: 'Sapato',
+//     inventory: 1000,
+//     idealInventory: 1200,
+//   },
+//   {
+//     key: '2',
+//     item: 2,
+//     product: 'Máquina de lavar',
+//     inventory: 1450,
+//     idealInventory: 1500,
+//   },
+//   {
+//     key: '3',
+//     item: 3,
+//     product: 'Suporte para notebook',
+//     inventory: 2100,
+//     idealInventory: 2100,
+//   },
+// ];
 
-export const TableComponent: React.FC = () => (
+type TableProps = {
+  data: any;
+};
+
+export const TableComponent: React.FC<TableProps> = ({ data }) => (
   <Container>
     <Table style={{ width: '100%' }} columns={columns} dataSource={data} />
   </Container>
